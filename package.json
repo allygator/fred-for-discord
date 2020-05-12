@@ -1,0 +1,19 @@
+{
+  "name": "fred-on-discord",
+  "version": "0.0.1",
+  "description": "The fam has moved to Discord so we are reincarnating Fred to Discord as well",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SammyIsra/fred-for-discord.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SammyIsra/fred-for-discord/issues"
+  },
+  "homepage": "https://github.com/SammyIsra/fred-for-discord#readme"
+}
