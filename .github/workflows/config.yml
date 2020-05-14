@@ -6,7 +6,7 @@ name: CD
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,7 +17,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Pull from origin/master
-      run: git -C ~/fred-for-discord pull
-        
+      - name: Fetch from origin/master
+        run: git -C ~/fred-for-discord fetch
+      # Runs a single command using the runners shell
+      - name: Pull from origin/master
+        run: git -C ~/fred-for-discord pull
