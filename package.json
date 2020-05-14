@@ -19,9 +19,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SammyIsra/fred-for-discord/issues"
+    "url": "https://github.com/allygator/fred-for-discord/issues"
   },
-  "homepage": "https://github.com/SammyIsra/fred-for-discord#readme",
+  "homepage": "https://github.com/allygator/fred-for-discord#readme",
   "devDependencies": {
     "nodemon": "^2.0.3"
   }
