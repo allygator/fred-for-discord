@@ -3,17 +3,26 @@
   "version": "0.0.1",
   "description": "The fam has moved to Discord so we are reincarnating Fred to Discord as well",
   "main": "index.js",
+  "author": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "discord.js": "^12.2.0",
+    "winston": "^3.2.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SammyIsra/fred-for-discord.git"
+    "url": "git+https://github.com/allygator/fred-for-discord.git"
   },
-  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SammyIsra/fred-for-discord/issues"
+    "url": "https://github.com/allygator/fred-for-discord/issues"
   },
-  "homepage": "https://github.com/SammyIsra/fred-for-discord#readme"
+  "homepage": "https://github.com/allygator/fred-for-discord#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
 }
