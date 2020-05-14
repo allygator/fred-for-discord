@@ -17,8 +17,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Fetch from origin/master
-        run: git -C ~/fred-for-discord fetch
-      # Runs a single command using the runners shell
+      # Pull down master
       - name: Pull from origin/master
         run: git -C ~/fred-for-discord pull
