@@ -7,7 +7,6 @@ client.on("ready", () => {
 client.on("message", (message) => {
   lowerMessage = message.content.toLowerCase();
   if (lowerMessage.substring(0, 4) === prefix) {
-    console.log(message.content);
     var args = lowerMessage.substring(4).split(" ");
     args = args.splice(1);
     var cmd = args[0];
