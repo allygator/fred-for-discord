@@ -7,7 +7,8 @@ client.on("ready", () => {
 client.on("message", (message) => {
   lowerMessage = message.content.toLowerCase();
   if (lowerMessage.substring(0, 4) === prefix) {
-    var args = lowerMessage.content.substring(4).split(" ");
+    console.log(message.content);
+    var args = lowerMessage.substring(4).split(" ");
     args = args.splice(1);
     var cmd = args[0];
     switch (cmd) {
@@ -17,7 +18,7 @@ client.on("message", (message) => {
         break;
     }
   } else if (message.channel.type === "dm") {
-    var args = lowerMessage.substring(0).split(" ");
+    var args = lowerMessage.split(" ");
     var cmd = args[0];
     switch (cmd) {
       // fred ping

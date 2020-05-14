@@ -2,7 +2,7 @@
   "name": "fred-on-discord",
   "version": "0.0.1",
   "description": "The fam has moved to Discord so we are reincarnating Fred to Discord as well",
-  "main": "bot.js",
+  "main": "index.js",
   "author": "",
   "scripts": {
     "start": "node index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SammyIsra/fred-for-discord.git"
+    "url": "git+https://github.com/allygator/fred-for-discord.git"
   },
   "license": "MIT",
   "bugs": {
