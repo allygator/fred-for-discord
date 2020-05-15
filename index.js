@@ -52,6 +52,7 @@ client.on("message", (message) => {
 
           .catch((error) => {
             console.log(error);
+            message.channel.send("Shits broke, Im not fixing it. probably.");
           });
 
         break;
@@ -82,6 +83,7 @@ client.on("message", (message) => {
 
           .catch((error) => {
             console.log(error);
+            message.channel.send("Shits broke, Im not fixing it. probably.");
           });
 
         break;
