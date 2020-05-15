@@ -9,8 +9,10 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
     "discord.io": "^2.5.3",
     "discord.js": "^12.2.0",
+    "node-fetch": "^2.6.0",
     "winston": "^3.2.1"
   },
   "repository": {
