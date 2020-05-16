@@ -16,11 +16,11 @@ jobs:
     steps:
       # Pull down master
       - name: Pull from origin/master
-        run: git -C ~/fred-for-discord pull\
+          run: git -C ~/fred-for-discord pull
       - name: Move to Fred folder and update packages
           run: |
             cd ~/fred-for-discord
             npm install
         # Build Typescript output files
-        - name: Rebuild TS Files
+      - name: Rebuild TS Files
           run: npm run build
