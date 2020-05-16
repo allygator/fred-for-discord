@@ -22,13 +22,13 @@ jobs:
     needs: update
     # This runs on the self-hosted Raspberry Pi 4 in Alyssa's entertainment stand
     runs-on: [self-hosted, linux, ARM]
-    
+
     steps:
       # Move to correct folder and install any new packages
       - name: Move to Fred folder and update packages
-        run:  |
-        cd ~/fred-for-discord
-        npm install
+        run: |
+          cd ~/fred-for-discord
+          npm install
       # Build Typescript output files
       - name: Rebuild TS Files
         run: npm run build
