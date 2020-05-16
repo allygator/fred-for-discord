@@ -1,5 +1,8 @@
 config.json
 
+# TS Output folder
+output/
+
 # Logs
 logs
 *.log

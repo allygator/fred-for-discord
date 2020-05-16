@@ -5,10 +5,12 @@
   "main": "index.js",
   "author": "",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node ./output/index.js",
+    "dev": "nodemon ./output/index.js",
+    "build": "tsc"
   },
   "dependencies": {
+    "@types/node-fetch": "^2.5.7",
     "discord.io": "^2.5.3",
     "discord.js": "^12.2.0",
     "node-fetch": "^2.6.0",
@@ -24,6 +26,7 @@
   },
   "homepage": "https://github.com/allygator/fred-for-discord#readme",
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "typescript": "^3.9.2"
   }
 }
