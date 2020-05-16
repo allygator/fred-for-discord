@@ -6,7 +6,7 @@ on:
     branches: [master]
 
 jobs:
-  # This workflow contains a single job called "build"
+  # This workflow updates the repo by pulling down remote changes and installing npm packes, then rebuilding TS files
   update:
     name: Update repo
     # This runs on the self-hosted Raspberry Pi 4 in Alyssa's entertainment stand
