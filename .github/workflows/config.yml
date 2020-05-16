@@ -1,4 +1,4 @@
-name: Rebuild Project
+name: Pull repo changes and Rebuild TS
 
 # Only runs on push to master branch
 on:
@@ -19,7 +19,7 @@ jobs:
         run: git -C ~/fred-for-discord pull
   build:
     name: Install packages and Rebuild
-    needs: update
+    needs: Update repo
     # This runs on the self-hosted Raspberry Pi 4 in Alyssa's entertainment stand
     runs-on: [self-hosted, linux, ARM]
 
