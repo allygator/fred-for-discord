@@ -54,3 +54,4 @@ typings/
 
 # Serverless directories
 .serverless/
+Fred.code-workspace
