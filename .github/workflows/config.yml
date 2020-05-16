@@ -1,4 +1,4 @@
-name: Update Repo and Rebuild TS
+name: Pull repo changes and Rebuild TS
 
 # Only runs on push to master branch
 on:
@@ -7,7 +7,8 @@ on:
 
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  update:
+    name: Update repo
     # This runs on the self-hosted Raspberry Pi 4 in Alyssa's entertainment stand
     runs-on: [self-hosted, linux, ARM]
 
@@ -16,11 +17,16 @@ jobs:
       # Pull down master
       - name: Pull from origin/master
         run: git -C ~/fred-for-discord pull
+  build:
+    name: Install packages and Rebuild
+    needs: update
+    # This runs on the self-hosted Raspberry Pi 4 in Alyssa's entertainment stand
+    runs-on: [self-hosted, linux, ARM]
       # Move to correct folder and install any new packages
-      - name: Move to Fred folder
+      - name: Move to Fred folder and update packages
         run:  |
         cd ~/fred-for-discord
         npm install
       # Build Typescript output files
-      - name: Move to Fred folder
+      - name: Rebuild TS Files
         run: npm run build
