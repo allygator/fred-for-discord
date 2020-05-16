@@ -1,4 +1,4 @@
-name: Pull repo changes and Rebuild TS
+name: Rebuild Project
 
 # Only runs on push to master branch
 on:
