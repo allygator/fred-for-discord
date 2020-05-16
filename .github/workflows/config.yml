@@ -7,28 +7,21 @@ on:
 
 jobs:
   # This workflow updates the repo by pulling down remote changes and installing npm packes, then rebuilding TS files
-  update:
-    name: Update repo
+  build:
+    name: Update repo and rebuild
     # This runs on the self-hosted Raspberry Pi 4 in Alyssa's entertainment stand
     runs-on: [self-hosted, linux, ARM]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Pull down master
+      - uses: actions/checkout@v2
+        # Pull down master
       - name: Pull from origin/master
         run: git -C ~/fred-for-discord pull
-  build:
-    name: Install packages and Rebuild
-    needs: Update repo
-    # This runs on the self-hosted Raspberry Pi 4 in Alyssa's entertainment stand
-    runs-on: [self-hosted, linux, ARM]
-
-    steps:
-      # Move to correct folder and install any new packages
       - name: Move to Fred folder and update packages
         run: |
           cd ~/fred-for-discord
           npm install
-      # Build Typescript output files
+        # Build Typescript output files
       - name: Rebuild TS Files
         run: npm run build
