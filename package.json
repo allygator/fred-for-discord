@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node ./output/index.js",
     "dev": "nodemon ./output/index.js",
-    "format": "prettier --write ./src/index.ts",
+    "format": "prettier --write ./src",
     "build": "tsc"
   },
   "dependencies": {
