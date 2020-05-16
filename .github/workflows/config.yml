@@ -17,18 +17,19 @@ jobs:
       # Pull down master
       - name: Pull from origin/master
         run: git -C ~/fred-for-discord pull
+
+  # This workflow updates the repo by pulling down remote changes and installing npm packes, then rebuilding TS files
   build:
-    name: Install packages and Rebuild
-    needs: update
+    name: Install and rebuild
     # This runs on the self-hosted Raspberry Pi 4 in Alyssa's entertainment stand
     runs-on: [self-hosted, linux, ARM]
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Move to correct folder and install any new packages
-      - name: Move to Fred folder and update packages
-        run: |
-          cd ~/fred-for-discord
-          npm install
-      # Build Typescript output files
-      - name: Rebuild TS Files
+      # Pull down master
+      - name: Move folder
+        run: cd ~/fred-for-discord
+      - name: Install packages
+        run: cd ~/fred-for-discord
+      - name: Rebuild TS
         run: npm run build
