@@ -9,3 +9,9 @@ Fred's abilities include:
   * Replies "Pong"
 * Pubsub
   * Replies with a version of yes or no to whether or not pub subs are on sale
+  
+Fred's future abilities:
+* Roll X (Where x is a number)
+ * Replies with a random number between 0-X
+* Image X (where x is any search term)
+ * Replies with a google image result
