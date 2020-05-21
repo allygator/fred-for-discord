@@ -1,6 +1,6 @@
 import Discord from "discord.js";
 import { prefix, token } from "./config.json";
-import { pubSub, ping } from "./commands";
+import { pubSub, ping, roll } from "./commands";
 
 const client = new Discord.Client();
 
@@ -23,6 +23,10 @@ client.on("message", (message) => {
         //Are they on sale?
         pubSub(message);
         break;
+      case "roll":
+        // Roll dice
+        roll(message);
+        break;
     }
   } else if (message.channel.type === "dm") {
     var args = lowerMessage.split(" ");
@@ -35,8 +39,16 @@ client.on("message", (message) => {
       case "pubsub":
         pubSub(message);
         break;
+      case "roll":
+        // Roll dice
+        roll(message);
+        break;
     }
   }
+});
+
+client.on("error", (err) => {
+  console.error(err);
 });
 
 client.login(token);
