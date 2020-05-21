@@ -1,6 +1,6 @@
 import Discord from "discord.js";
 import { prefix, token } from "./config.json";
-import { pubSub, ping, imageSearch, location } from "./commands";
+import { pubSub, ping, imageSearch, location, roll } from "./commands";
 
 const client = new Discord.Client();
 
@@ -30,6 +30,10 @@ client.on("message", (message) => {
       case "where":
         location(message);
         break;
+      case "roll":
+        // Roll dice
+        roll(message);
+        break;
     }
   } else if (message.channel.type === "dm") {
     var args = lowerMessage.split(" ");
@@ -40,6 +44,7 @@ client.on("message", (message) => {
         ping(message);
         break;
       case "pubsub":
+        //Are they on sale?
         pubSub(message);
         break;
       case "image":
@@ -49,8 +54,16 @@ client.on("message", (message) => {
       case "where":
         location(message);
         break;
+      case "roll":
+        // Roll dice
+        roll(message);
+        break;
     }
   }
+});
+
+client.on("error", (err) => {
+  console.error(err);
 });
 
 client.login(token);

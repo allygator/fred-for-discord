@@ -39,7 +39,7 @@ export function pubSub(message: Discord.Message): Promise<void> {
       }
     })
     .catch((error) => {
-      console.log(error);
+      console.error(error);
       message.channel.send("Shits broke, Im not fixing it. probably.");
     });
 }
