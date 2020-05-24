@@ -24,8 +24,6 @@ client.on("message", (message) => {
         pubSub(message);
         break;
       case "image":
-        imageSearch(message);
-        break;
       case "animate":
         imageSearch(message);
         break;
