@@ -6,6 +6,7 @@ import fetch from "node-fetch";
  * Initiates a google image search on specified term and responds with a link to the image
  * @param {Discord.Messaage} message
  */
+// Search parameters at https://developers.google.com/custom-search/v1/reference/rest/v1/cse/list
 export function imageSearch(message: Discord.Message): Promise<void> {
   var searchTerm = message.content.split(" ");
   searchTerm = searchTerm.splice(2);
