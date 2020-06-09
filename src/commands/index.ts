@@ -3,3 +3,4 @@
 export * from "./ping";
 export * from "./pubSub";
 export * from "./imageSearch";
+export * from "./location";
