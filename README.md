@@ -14,6 +14,8 @@ Fred's abilities include:
   - Replies with an image from google image search of the specified search term
 - Animate (search term)
   - Replies with an animated image from google image search of the specified search term
+- Where
+  - Replies with the hostname of the machine fred is running from
 
 Fred's future abilities:
 
