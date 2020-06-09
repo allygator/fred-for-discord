@@ -29,6 +29,7 @@ client.on("message", (message) => {
         break;
       case "where":
         location(message);
+        break;
     }
   } else if (message.channel.type === "dm") {
     var args = lowerMessage.split(" ");
@@ -47,6 +48,7 @@ client.on("message", (message) => {
         break;
       case "where":
         location(message);
+        break;
     }
   }
 });
