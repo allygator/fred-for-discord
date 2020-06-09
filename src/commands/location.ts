@@ -5,7 +5,7 @@ import Discord from "discord.js";
  * @param message
  */
 export function location(message: Discord.Message) {
-  var os = require("os");
-  var hostname = os.hostname();
+  const os = require("os");
+  const hostname = os.hostname();
   return message.channel.send(hostname);
 }
