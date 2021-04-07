@@ -1,6 +1,6 @@
 import Discord from "discord.js";
 import { prefix, token } from "./config.json";
-import { pubSub, ping, imageSearch, location } from "./commands";
+import { pubSub, ping, imageSearch, location, keys } from "./commands";
 
 const client = new Discord.Client();
 
@@ -30,6 +30,9 @@ client.on("message", (message) => {
       case "where":
         location(message);
         break;
+      case "keys":
+        keys(message);
+        break;
     }
   } else if (message.channel.type === "dm") {
     var args = lowerMessage.split(" ");
@@ -48,6 +51,9 @@ client.on("message", (message) => {
         break;
       case "where":
         location(message);
+        break;
+      case "keys":
+        keys(message);
         break;
     }
   }
