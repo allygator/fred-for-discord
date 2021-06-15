@@ -8,7 +8,7 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user?.tag ?? "<anonymous>"}!`);
 });
 
-client.on("message", (message) => {
+client.on("message", (message: Discord.Message) => {
   const lowerMessage = message.content.toLowerCase();
   if (lowerMessage.split(" ")[0] === prefix) {
     var args = lowerMessage.substring(4).split(" ");
