@@ -6,34 +6,18 @@ The fam has moved to Discord so we are reincarnating Fred to Discord as well
 
 Fred's abilities include:
 
-- `Ping`
+- Ping
   - Replies "Pong"
-- `Pubsub`
+- Pubsub
   - Replies with a version of yes or no to whether or not pub subs are on sale
-- `Image searchTerm`
+- Image (search term)
   - Replies with an image from google image search of the specified search term
-- `Animate searchTerm`
+- Animate (search term)
   - Replies with an animated image from google image search of the specified search term
-- `Where`
+- Where
   - Replies with the hostname of the machine fred is running from
-- `Keys [dungeon [level]]`
-  - Without arguments, returns rows from the database of previously logged keys in the format `User dungeon level`
-  - With arguments, returns "Noted" and logs the specified key to the database.
-  - **Users can only have one key listed at a time**
 
 Fred's future abilities:
 
 - Roll X (Where x is a number)
   - Replies with a random number between 0-X
-
-# Development
-
-Fred runs in docker, with a postgres database connection using [Prisma](https://www.prisma.io/).
-
-To run fred, create a copy of `.env.template`, renaming it to `.env` then change `(IPADDRESS)` to the IP address of your machine.
-
-To start the docker containers run `docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d`
-
-After starting the containers run `npx prisma migrate dev --name init` locally to setup the database inside docker.
-
-Changes made to any file in `/src` will update inside the docker container.
