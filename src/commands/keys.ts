@@ -15,7 +15,10 @@ export const keys = async (message: Discord.Message) => {
   //Formats the message to remove nonalpha characters except spaces, and dashes
   const items = message.content.replace(/[^\w\s\-]/gi, "").split(" ");
   //Check if the message is type 1 or 2
-  if (
+  if (items.includes("delete")) {
+    await prisma.keys.delete({ where: { name: message.author.username } });
+    return message.channel.send("Your key has been deleted.");
+  } else if (
     (items[0].toLowerCase() == prefix && items.length < 3) ||
     (items[0] == "keys" && items.length < 2)
   ) {
