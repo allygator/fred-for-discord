@@ -29,7 +29,6 @@ Fred runs in docker, with a postgres database connection using [Prisma](https://
 To run fred, change `(IPADDRESS)` in `.\prisma\schema.prisma` to the IP address of your machine.
 
 To start the docker containers run `docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d`
-If you are restarting the containers, youll have the `postgres-data` directory on your machine, this directory needs to be deleted before restarting the containers.
 
 After starting the containers run `docker-compose exec bot npx prisma migrate dev` to setup the database inside docker.
 

@@ -31,6 +31,3 @@ services:
       SERVICE_NAME: postgres
     networks:
       - shared
-
-volumes:
-  postgres-data:
