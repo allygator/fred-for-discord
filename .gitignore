@@ -1,7 +1,6 @@
 config.json
 .env
 /postgres-data
-/prisma/migrations
 
 # TS Output folder
 output/
