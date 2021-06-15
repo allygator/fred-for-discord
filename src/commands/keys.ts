@@ -1,6 +1,8 @@
 import Discord from "discord.js";
-import prisma from "../utils/prisma";
+import { PrismaClient } from "@prisma/client";
 import { prefix } from "../config.json";
+
+const prisma = new PrismaClient();
 
 /**
  * Responds to two formats of "keys"

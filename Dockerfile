@@ -6,7 +6,7 @@ COPY package*.json ./
 COPY prisma ./prisma/
 COPY nodemon.json ./
 COPY tsconfig.json ./
-COPY .env ./
+# COPY .env ./
 
 RUN npm install
 

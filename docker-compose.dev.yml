@@ -2,4 +2,4 @@ version: "3"
 
 services:
   bot:
-    command: [npm, run, start:dev]
+    command: [npm, run, dev]

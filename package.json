@@ -5,18 +5,21 @@
   "main": "index.js",
   "author": "",
   "scripts": {
-    "start": "node ./output/index.js",
-    "dev": "nodemon ./output/index.js",
+    "start": "tsc && node ./output/index.js",
+    "dev": "nodemon -L src/index.ts",
     "format": "prettier --write ./src",
     "build": "tsc",
     "build:watch": "tsc --watch"
   },
   "dependencies": {
+    "@prisma/client": "^2.25.0",
     "@types/node-fetch": "^2.5.7",
     "discord.io": "^2.5.3",
     "discord.js": "^12.2.0",
     "node-fetch": "^2.6.1",
-    "winston": "^3.2.1"
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2",
+    "winston": "^3.3.3"
   },
   "repository": {
     "type": "git",
@@ -28,8 +31,8 @@
   },
   "homepage": "https://github.com/allygator/fred-for-discord#readme",
   "devDependencies": {
-    "nodemon": "^2.0.3",
-    "typescript": "^3.9.2",
-    "prettier": "^2.0.5"
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1",
+    "prisma": "^2.25.0"
   }
 }
