@@ -1,4 +1,7 @@
 config.json
+.env
+/postgres-data
+
 
 # TS Output folder
 output/

@@ -1,0 +1,15 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-arm-openssl-1.1.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://fred-bot:secret@(IP_ADDRESS):5432/fred-bot"
+}
+
+model Keys {
+  name    String  @unique
+  dungeon String
+  level   Int
+}

@@ -1,0 +1,36 @@
+version: "3"
+
+networks:
+  shared:
+
+services:
+  bot:
+    build: .
+    volumes:
+      - ./src:/app/src
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+  postgres:
+    image: postgres:13-alpine
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: fred-bot
+      POSTGRES_USER: fred-bot
+      POSTGRES_PASSWORD: secret
+      SERVICE_TAGS: dev
+      SERVICE_NAME: postgres
+    networks:
+      - shared
+
+volumes:
+  postgres-data:

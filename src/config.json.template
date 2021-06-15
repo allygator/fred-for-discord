@@ -1,0 +1,7 @@
+{
+  "googleToken": "GOOGLEAPITOKE",
+  "searchId": "GOOGLESEARCHTOKEN",
+  "weatherAPI": "ACCUWEATHERTOKEN",
+  "token": "DISCORDTOKEN",
+  "prefix": "BOTPREFIX"
+}
