@@ -2,6 +2,17 @@ networks:
   shared:
 
 services:
+  bot:
+    build: .
+    volumes:
+      - ./src:/app/src
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
+    env_file:
+      - .env
   postgres:
     image: postgres:13-alpine
     restart: unless-stopped
@@ -18,18 +29,6 @@ services:
       SERVICE_NAME: postgres
     networks:
       - shared
-  bot:
-    build: .
-    volumes:
-      - ./src:/app/src
-      - ./prisma/schema.prisma:/app/prisma/schema.prisma
-    restart: unless-stopped
-    ports:
-      - 3000:3000
-    depends_on:
-      - postgres
-    env_file:
-      - .env
 
 volumes:
   postgres-data:

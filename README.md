@@ -30,10 +30,10 @@ Fred's future abilities:
 
 Fred runs in docker, with a postgres database connection using [Prisma](https://www.prisma.io/).
 
-To run fred, create a copy of `.env.template`, renaming it to `.env` then change `(IPADDRESS)` to the IP address of your machine. Create a copy of `/src/config.template.json` renaming it to `config.json`. Replace the placeholders with their respective keys.
+To run fred, create a copy of `.env.template`, renaming it to `.env` then change `(IPADDRESS)` to the IP address of your machine.
 
 To start the docker containers run `docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d`
 
-After starting the containers run `docker-compose exec bot npx prisma migrate deploy` to setup the database.
+After starting the containers run `npx prisma migrate dev --name init` locally to setup the database inside docker.
 
-Changes made to any file in `/src` will update inside the docker container. Changes made to `/prisma/schema.prisma` require running the above exec command before changes are reflected in the database.
+Changes made to any file in `/src` will update inside the docker container.
