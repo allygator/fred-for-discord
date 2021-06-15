@@ -16,8 +16,7 @@ Fred's abilities include:
   - Replies with an animated image from google image search of the specified search term
 - Where
   - Replies with the hostname of the machine fred is running from
-
-Fred's future abilities:
-
-- Roll X (Where x is a number)
-  - Replies with a random number between 0-X
+- Roll
+  - Rolls a random number WoW or DnD style, depending on input.
+    - For WoW style, `roll [low] [high]` where both arguments are optional
+    - For DnD style, `roll [amount]d[sides]`
