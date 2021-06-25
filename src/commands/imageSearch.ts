@@ -1,5 +1,6 @@
 import Discord from "discord.js";
 import { searchId, googleToken } from "../config.json";
+import { prefix } from "../config.json";
 import fetch from "node-fetch";
 
 /**
@@ -8,7 +9,16 @@ import fetch from "node-fetch";
  */
 export function imageSearch(message: Discord.Message): Promise<void> {
   var searchTerm = message.content.split(" ");
-  searchTerm = searchTerm.splice(2);
+  for (let i = 0; i < searchTerm.length; i++) {
+    if (
+      searchTerm[i] == "image" ||
+      searchTerm[i].toLowerCase() == prefix ||
+      searchTerm[i] == "animate"
+    ) {
+      searchTerm.splice(i, 1);
+      i--;
+    }
+  }
   var formattedsearch = searchTerm.join("%20");
   var num = Math.floor(Math.random() * 10);
   var type =
