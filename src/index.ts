@@ -21,7 +21,7 @@ client.on("message", (message: Discord.Message) => {
         break;
       case "pubsub":
         //Are they on sale?
-        pubSub(message);
+        pubSub(message, args);
         break;
       case "image":
       case "animate":
@@ -43,7 +43,7 @@ client.on("message", (message: Discord.Message) => {
         ping(message);
         break;
       case "pubsub":
-        pubSub(message);
+        pubSub(message, args);
         break;
       case "image":
       case "animate":
