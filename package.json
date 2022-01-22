@@ -15,7 +15,7 @@
     "@prisma/client": "^2.25.0",
     "@types/node-fetch": "^2.5.7",
     "discord.js": "^12.2.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.2",
     "winston": "^3.3.3"
