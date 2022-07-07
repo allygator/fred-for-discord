@@ -8,6 +8,7 @@ services:
     build: .
     volumes:
       - ./src:/app/src
+      - package.json:/app
     restart: unless-stopped
     ports:
       - 3000:3000
@@ -15,6 +16,15 @@ services:
       - postgres
     env_file:
       - .env
+    command: [npm, run, dev]
+  webserver:
+    build: ./server
+    volumes:
+      - ./server:/app
+    restart: unless-stopped
+    ports:
+      - 53134:53134
+    command: npm start
   postgres:
     image: postgres:13-alpine
     restart: unless-stopped

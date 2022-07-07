@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:16-alpine
 
 WORKDIR /app
 
@@ -9,7 +9,5 @@ COPY tsconfig.json ./
 # COPY .env ./
 
 RUN npm install
-
-ENV NODE_ENV=production
 
 EXPOSE 3000
