@@ -5,18 +5,18 @@ networks:
 
 services:
   bot:
-    build: .
+    build: ./bot
     volumes:
-      - ./src:/app/src
-      - package.json:/app
+      - ./bot:/app
     restart: unless-stopped
     ports:
       - 3000:3000
-    depends_on:
-      - postgres
+    # depends_on:
+    #   - postgres
     env_file:
       - .env
     command: [npm, run, dev]
+    # command: sleep infinity
   webserver:
     build: ./server
     volumes:
